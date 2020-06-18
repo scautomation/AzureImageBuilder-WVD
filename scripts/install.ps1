@@ -12,6 +12,6 @@ invoke-webrequest -uri 'https://github.com/scautomation/AzureImageBuilder-WVD/ra
 
 #Install Computer Associates
 $path="c:\temp\CSRCA01_v1.0.6_en-us.msi"
-#Start-Process -FilePath msiexec.exe -ArgumentList '/i',$path,'/q' #-Wait -PassThru -Verb "RunAs"
+Start-Process -FilePath msiexec.exe -ArgumentList '/i',$path,'/q' -Wait -PassThru -Verb "RunAs"
 
-Expand-Archive -Path 'c:\temp\missioappstrugreen.zip' -DestinationPath 'c:\' -force -Confirm
+Expand-Archive -Path 'c:\temp\MissionAppsTrugreen.zip' -DestinationPath 'c:\' -force -Confirm
