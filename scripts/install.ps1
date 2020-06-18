@@ -16,3 +16,5 @@ Start-Process -FilePath msiexec.exe -ArgumentList '/i',$path,'/q' -Wait -PassThr
 
 #expand zip file to c:\myapp
 Expand-Archive -Path 'c:\temp\MissionAppsTrugreen.zip' -DestinationPath 'c:\' -force -Confirm
+
+#end
