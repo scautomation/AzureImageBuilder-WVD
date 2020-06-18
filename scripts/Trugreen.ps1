@@ -16,3 +16,4 @@ $path="c:\temp\CSRCA01_v1.0.6_en-us.msi"
 
 #expand zip file to c:\myapp
 Expand-Archive -Path 'c:\temp\MissionAppsTrugreen.zip' -DestinationPath 'c:\' -force -Confirm
+Expand-Archive -Path 'c:\temp\MissionAppsTrugreen.zip' -DestinationPath 'c:\' -force -Confirm
