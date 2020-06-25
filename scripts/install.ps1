@@ -16,24 +16,26 @@ Expand-Archive -Path 'c:\temp\ibm.zip' c:\temp
 
 $path="c:\temp\java\jre1.8.0_201.msi"
 Start-Process -FilePath msiexec.exe -ArgumentList '/i',$path, '/q' -PassThru -Verb "RunAs"
-start-sleep -Seconds 30
+start-sleep -Seconds 90
 
 $path="C:\temp\caExplorer\explorer.msi"
-Start-Process -FilePath msiexec.exe -ArgumentList '/i',$path, '/q' -PassThru -Verb "RunAs"
-start-sleep -Seconds 30
+Start-Process -FilePath msiexec.exe -ArgumentList '/i',$path, '/qn' -PassThru -Verb "RunAs"
+start-sleep -Seconds 90
 
 $path="c:\temp\ca1402\agtam.msi"
-Start-Process -FilePath msiexec.exe -ArgumentList '/i',$path, '/q' -PassThru -Verb "RunAs"
-start-sleep -Seconds 30
+Start-Process -FilePath msiexec.exe -ArgumentList '/i',$path, '/qn' -PassThru -Verb "RunAs"
+start-sleep -Seconds 90
 
 $path="c:\temp\ca1402\agtrc.msi"
-Start-Process -FilePath msiexec.exe -ArgumentList '/i',$path, '/q' -PassThru -Verb "RunAs"
-start-sleep -Seconds 30
+Start-Process -FilePath msiexec.exe -ArgumentList '/i',$path, '/qn' -PassThru -Verb "RunAs"
+start-sleep -Seconds 90
 
-$path="c:\temp\ca1402\agtrc.msi"
-Start-Process -FilePath msiexec.exe -ArgumentList '/i',$path, '/q' -PassThru -Verb "RunAs"
+$path="c:\temp\ca1402\agtsd.msi"
+Start-Process -FilePath msiexec.exe -ArgumentList '/i',$path, '/qn' -PassThru -Verb "RunAs"
 
-start-sleep -Seconds 30
+start-sleep -Seconds 120
+
+start-process "cmd.exe" "/c C:\temp\IBM i Access\install.bat"
 
 wscript.exe "C:\temp\IBM i Access\ClientSolutions\Windows_Application\install_acs_64_allusers.js"
 
